@@ -123,3 +123,12 @@ $(document).ready(function() {
     $(this).addClass('active');
 });
 
+$('.carousel').owlCarousel({
+    loop: true,
+    margin: 25,
+    autoplay: true,
+    autoplayTimeout: 2500,
+    autoplayHoverPause: true,
+    nav: true,
+
+})
