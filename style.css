@@ -415,12 +415,12 @@ button.filter-button:focus {
     outline: none;
 }
 
-section .container ul {
+section.container ul {
     display: flex;
     margin-bottom: 10px;
 }
 
-section .container li {
+section.container li {
     list-style: none;
     background-color: #eee;
     padding: 8px 20px;
@@ -429,7 +429,7 @@ section .container li {
     cursor: pointer;
 }
 
-section .container ul li.active {
+section.container ul li.active {
     background: #00a8b4;
     color: #fff;
 }
@@ -448,6 +448,7 @@ section .container ul li.active {
 
 #water-slider h3 {
     font-size: 40px;
+    margin-top: 50px;
 }
 
 .owl-carousel {
@@ -458,7 +459,7 @@ section .container ul li.active {
     position: relative;
     width: 500px;
     overflow: hidden;
-    margin-top: 25px;
+    margin-top: 50px;
 }
 
 
@@ -484,3 +485,42 @@ section .container ul li.active {
     transform: scale(1.1,1.1);
 }
 
+section#blog h3 {
+    text-align: center;
+}
+
+section#blog {
+    margin: 100px 0;
+    font-size: 40px;
+}
+
+.blog-par {
+    display: flex;
+    margin: 50px 0;
+}
+
+.blog-content {
+    display: flex;
+    align-items: center;
+}
+
+.blog-info-par ul li {
+    display: inline-block;
+    font-size: 13px;
+    color: #999;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.blog-info-par {
+    margin-left: 30px;
+}
+
+.blog-img-par img {
+    width: 360px;
+    height: 420px;
+}
+
+.blog-info-par h4 {
+    color: #00a8b4;
+}
