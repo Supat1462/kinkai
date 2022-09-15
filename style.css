@@ -523,4 +523,12 @@ section#blog {
 
 .blog-info-par h4 {
     color: #00a8b4;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.blog-img-par p {
+    color: #777;
+    line-height: 23px;
+    font-size: 14px;
 }
