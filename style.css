@@ -527,8 +527,30 @@ section#blog {
     margin: 5px 0;
 }
 
-.blog-img-par p {
+.blog-info-par p {
     color: #777;
     line-height: 23px;
     font-size: 14px;
 }
+
+.blog-img-par img {
+    width: 950px;
+    height: 160px;
+}
+
+footer {
+    border-top: 3px solid #00a8c5;
+}
+
+.footer-par {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0px;
+}
+
+.footer-logo-h {
+    font-size: 30px;
+    color: #00a8c5;
+}
+
+.footer 
