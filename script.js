@@ -8,11 +8,11 @@ var TxtType = function (el, toRotate, period) {
     this.isDeleting = false
 }
 
-TxtType.prototype.tick = function(){
+TxtType.prototype.tick = function () {
     var i = this.loopNum % this.toRotate.length;
     var fullTxt = this.toRotate[i];
 
-    if (this.isDeleting){
+    if (this.isDeleting) {
         this.txt = fullTxt.substring(0, this.txt.length - 1);
     }
     else {
@@ -22,16 +22,16 @@ TxtType.prototype.tick = function(){
     this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
     var that = this;
-    var delta = 200 - Math.random() *100;
+    var delta = 200 - Math.random() * 100;
 
-    if(!this.isDeleting && this.txt == fullTxt){
+    if (!this.isDeleting && this.txt == fullTxt) {
         delta = this.period;
         this.isDeleting = true;
     }
-    else if(this.isDeleting && this.txt ==='') {
+    else if (this.isDeleting && this.txt === '') {
         this.isDeleting = false;
         this.loopNum++;
-        delta = 500 ;
+        delta = 500;
     }
 
     setTimeout(() => {
@@ -39,13 +39,13 @@ TxtType.prototype.tick = function(){
     }, delta);
 }
 
-window.onload = function() {
+window.onload = function () {
     var elements = document.getElementsByClassName('typewrite');
-    for (var i = 0;i < elements.length;i++){
+    for (var i = 0; i < elements.length; i++) {
         var toRotate = elements[i].getAttribute('data-type');
         var period = elements[i].getAttribute('data-period');
 
-        if(toRotate){
+        if (toRotate) {
             new TxtType(elements[i], JSON.parse(toRotate));
         }
     }
@@ -66,16 +66,16 @@ function getTimeRemaining(endtime) {
     var days = Math.floor(t / (1000 * 60 * 60 * 24));
 
     return {
-        'total' : t,
-        'days' : days,
-        'hours' : hours,
-        'minutes' : minutes,
-        'secounds' : secound
+        'total': t,
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'secounds': secound
     };
 }
 
 
-function initializeClock(id, endtime){
+function initializeClock(id, endtime) {
     var clock = document.getElementById(id);
     var daysSpan = clock.querySelector('.days');
     var hoursSpan = clock.querySelector('.hours');
@@ -83,7 +83,7 @@ function initializeClock(id, endtime){
     var secondsSpan = clock.querySelector('.seconds');
 
 
-    function updateClock(){
+    function updateClock() {
         var t = getTimeRemaining(endtime);
 
         daysSpan.innerHTML = t.days;
@@ -98,26 +98,26 @@ function initializeClock(id, endtime){
 
 
     updateClock();
-    var timeinterval = setInterval(updateClock,1000);
+    var timeinterval = setInterval(updateClock, 1000);
 }
 
 var deadline = new Date(Date.parse(new Date()) + 12 * 24 * 60 * 60 * 1000);
-initializeClock('clockdiv' ,deadline);
+initializeClock('clockdiv', deadline);
 
-$(document).ready(function() {
-    $(".filter-button").click( function() {
-        var value =$(this).attr('data-filter');
+$(document).ready(function () {
+    $(".filter-button").click(function () {
+        var value = $(this).attr('data-filter');
 
-        if(value == 'all'){
+        if (value == 'all') {
             $('.filter').show('1000');
         }
-        else{
-            $('.filter').not('.'+value).hide('1000');
-            $('.filter').filter('.'+value).show('1000');
+        else {
+            $('.filter').not('.' + value).hide('1000');
+            $('.filter').filter('.' + value).show('1000');
         }
     });
 
-    if($(".filter-button").removeClass("active")){
+    if ($(".filter-button").removeClass("active")) {
         $(this).removeClass('active');
     }
     $(this).addClass('active');
@@ -125,4 +125,38 @@ $(document).ready(function() {
 
 
 
+$(window).scroll(function () {
+    if ($(this).scrollTop() >= 100) {
+        $('nav').addClass('nav-fixed');
+    }
+    else {
+        $('nav').removeClass('nav-fixed');
+    }
+});
 
+
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('#arrow i').fadeIn();
+        }
+        else {
+            $('#arrow i').fadeOut();
+        }
+    });
+    $("#arrow i").on('click', function () {
+        $("html,body").animate({
+            scrollTop :0
+        }, 600);
+        return false;
+    })
+});
+
+
+
+$(document).ready(function () {
+    $("#toggle-btn").click(function () {
+        $(".nav").toggleClass("nav-active");
+        $("#toggle-btn i").toggleClass("nav-active");
+    })
+})
