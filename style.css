@@ -592,7 +592,7 @@ p.copyright a {
 
 @media screen and (max-width: 768px) {
     div#toggle-btn {
-        color: #fff;
+        color: rgb(167, 167, 167);
         display: block;
         z-index: 1;
         font-size: 25px;
@@ -606,6 +606,7 @@ p.copyright a {
         width: 100%;
         height: 100vh;
         transition: all 0.5s ease;
+        opacity: 90%;
     }
     .nav-active {
         left: 0;
@@ -622,6 +623,94 @@ p.copyright a {
         margin-top: 100px;
     }
     .header-info-par p{
+        font-size: 14px;
+        line-height: 26px;
+    }
+    section#welcome-text h2 {
+        font-size: 26px;
+    }
+    section#welcome-text p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    section#welcome-text {
+        padding: 40px 0;
+    }
+    .slides{
+        flex-direction: column;
+    }
+    .slide_1{
+        width: 90%;
+        min-width: 90%;
+        height: 240px;
+        margin: 20px 15px;
+    }
+    section#blog{
+        padding: 50px 0px;
+    }
+    .book-content-par{
+        flex-direction: column;
+    }
+    .book-counter h3 {
+        font-size: 40px;
+        text-align: center;
+    }
+    div#clockdiv {
+        font-size: 18px;
+    }
+    div#clockdiv > div {
+        margin-right: 14px;
+    }
+    .smalltext {
+        font-size: 12px;
+        padding-top: 5px;
+    }
+    .book-counter {
+        margin: 0 auto;
+    }
+    .book-form {
+        margin-top: 20px;
+    }
+    section#Gallery {
+        margin: 30px 0;
+    }
+    section#water-slider {
+        padding: 50px 0;
+    }
+    #water-slider h3 {
+        font-size: 23px;
+        margin-bottom: 8px;
+    }
+    section#blog {
+        padding: 40px 0;
+    }
+    section#blog h3 {
+        font-size: 25px;
+    }
+    .blog-par {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+    .blog-content {
+        margin: 10px 0;
+    }
+    .blog-info-par h4 {
+        font-size: 16px;
+    }
+    .blog-info-par p {
+        font-size: 13px;
+    }
+    .footer-par {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-1.footer-info h3 {
+        font-size: 20px;
+        margin-bottom: 18px;
+        margin-top: 15px;
+    }
+    .p.copyright {
+        padding: 12px 0;
         font-size: 14px;
     }
 }
